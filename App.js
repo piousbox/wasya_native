@@ -1,15 +1,16 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import {
+  StyleSheet, Text, View, ScrollView,
+} from 'react-native'
 import IndustrialHeader from './src/IndustrialHeader'
 import MainBanner from './src/MainBanner'
 
 export default class App extends React.Component {
   render() {
     return (
-      <View>
+      <ScrollView>
         <IndustrialHeader />
         <MainBanner />
-        <Text>About</Text>
         <Text>Services</Text>
         <Text>OurProcess</Text>
         <Text>Team</Text>
@@ -17,7 +18,7 @@ export default class App extends React.Component {
         <Text>ContactUs</Text>
         <Text>Map</Text>
         <Text>Footer</Text>
-      </View>
+      </ScrollView>
     )
   }
 }
