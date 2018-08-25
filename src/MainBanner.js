@@ -4,7 +4,7 @@ import {
   Dimensions,
 } from 'react-native'
 import Image from 'react-native-scalable-image'
-import { Icon, Card, } from 'react-native-elements'
+import { Icon, Card, Button, } from 'react-native-elements'
 
 const bannerPath = './bg5.jpg'
 const banner = require(bannerPath)
@@ -55,11 +55,9 @@ class Header extends React.Component {
 
 class MyCard extends React.Component {
   render () {
-    console.log('+++ myCard:', this.props)
-
     return (
       <View>
-        <Card image={require(this.props.imgPath)}>
+        <Card image={this.props.img} imageStyle={{ height: 200 }}>
           <Text style={style.cardTitle} >{this.props.title}</Text>
           <Divider />
           <Text style={style.cardDescription} >{this.props.description}</Text>
@@ -72,18 +70,18 @@ class MyCard extends React.Component {
 export default class MainBanner extends React.Component {
   render() {
     const servicesCards = [
-      { title: "Ruby on Rails", imgPath: "./400x200/ruby.jpg", description: "Our framework for rapid prototyping and non-real-time applications is Ruby on Rails. We use it for constructing APIs, providing backend for websites, generating static websites, and as the tool for general scripting." },
-      /* { title: "", imgPath: "", description: "" },
-      { title: "", imgPath: "", description: "" },
-      { title: "", imgPath: "", description: "" },
-      { title: "", imgPath: "", description: "" },
-      { title: "", imgPath: "", description: "" },
-      { title: "", imgPath: "", description: "" },
-      { title: "", imgPath: "", description: "" }, */
+      { title: "Ruby on Rails", img: require("./400x200/ruby.jpg"), description: "Our framework for rapid prototyping and non-real-time applications is Ruby on Rails. We use it for constructing APIs, providing backend for websites, generating static websites, and as the tool for general scripting." },
+      { title: "Node.js", img: require("./400x200/node.jpg"), description: "Node.js and Socket.js are our tools of choice for implementing real-time applications, event-driven applications, and microservices. We tend to use Node in combination with websockets." },
+      { title: "React.js", img: require("./400x200/react.jpg"), description: "We write frontend code using the React framework. It is the most popular front-end ecosystem currently available. Previously, we have worked a lot with Backbone and Angular.js." },
+      { title: "Chef", img: require("./400x200/chef.jpg"), description: "We wire up build/deploy pipelines using Chef. Simple deployments are done with standalone chef. For more complex cases we use server-client architecture., in which a change is propagated to each machine from a central repository." },
+      { title: "API's", img: require("./400x200/api.jpg"), description: "We are experts at building custom API's (ReSTful as well as event-driven). Documentation with Docs.io (formerly swagger). Test-driven. Deployed at scale." },
+      { title: "MVP's", img: require("./400x200/mvp.jpg"), description: "One of the most important steps in develoing consumer facing applications is market validation. We employ the lean methologody & iterative development to build versions of the product that effectively validate the market and the concept." },
+      { title: "UI/UX", img: require("./400x200/uiux.jpg"), description: "Modern software tools are expected to be highly usable, to the degree of not requiring documentation. The user interface should be self-explanatory, and the user experience intuitive." },
+      { title: "Devops", img: require("./400x200/devops.jpg"), description: "The mythical creature of Devops does not lend itself to being caught easily. We script repetitive maintenance tasks, automate build/deploy pipelines, and enable efficient operation." },
     ]
     let ourServicesCards = []
     servicesCards.forEach((item, idx) => {
-      ourServicesCards.push(<MyCard key={idx} title={item.title} description={item.description} imgPath={item.imgPath} />)
+      ourServicesCards.push(<MyCard key={idx} {...item} />)
     })
 
     return (
@@ -112,6 +110,20 @@ export default class MainBanner extends React.Component {
         <Text style={style.p} >We do web application development, integration with external services, deployments, automation, wireframing and prototyping, as well as monitoring and scaling of existing applications. We will also go refactoring/rewriting of an existing application and migrating it from old codebase to nice and shiny new paradigm.</Text>
         
         { ourServicesCards }
+
+        <View style={{ paddingTop: 20 }}>
+          <Header>Our Process</Header>
+          <Text style={style.p} >We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows.</Text>
+          <View style={{ alignItems: 'center' }}>
+            <Button titleStyle={{ fontWeight: "700" }}
+              buttonStyle={{ 
+                padding: 20,
+                backgroundColor: "green",
+                width: 200,
+                height: 45,
+              }} title="Read More" />
+          </View>
+        </View>
 
       </View>)
   }
