@@ -4,7 +4,7 @@ import {
 } from 'react-native'
 import IndustrialHeader from './src/IndustrialHeader'
 import MainBanner from './src/MainBanner'
-import { Clients, Testimonials, } from './src/Testimonials'
+import { Clients, ContactUs, OurLocation, Testimonials, } from './src/Testimonials'
 import { Divider } from './src/MainBanner'
 
 export default class App extends React.Component {
@@ -14,12 +14,9 @@ export default class App extends React.Component {
         <IndustrialHeader />
         <MainBanner />
         <Clients />
-        <Testimonials />
-        <Divider color="red" />
-
-        <Text>ContactUs</Text>
-        <Text>Map</Text>
-        <Text>Footer</Text>
+        <Testimonials /> 
+        <OurLocation />
+        <ContactUs />
       </ScrollView>
     )
   }

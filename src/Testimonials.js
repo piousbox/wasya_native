@@ -49,6 +49,69 @@ class Clients extends React.Component {
   }
 }
 
+import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
+class ContactUs extends React.Component {
+  render () {
+    return (
+      <View>
+        <Header>ContactUs</Header>
+
+        <FormLabel>Name</FormLabel>
+        <FormInput onChangeText={() => {}}/>
+
+        <FormLabel>Email</FormLabel>
+        <FormInput onChangeText={() => {}}/>
+
+        <FormLabel>Phone</FormLabel>
+        <FormInput onChangeText={() => {}}/>
+        
+        <FormLabel>Message</FormLabel>
+        <FormInput onChangeText={() => {}}/>
+
+        <View style={{ alignItems: 'center' }}>
+          <Button titleStyle={{ fontWeight: "700" }}
+            buttonStyle={{ 
+              padding: 20,
+              backgroundColor: "green",
+              width: 200,
+              height: 45,
+            }} title="Submit" />
+        </View>
+
+      </View>)
+  }
+}
+
+import MapView, { Marker, } from 'react-native-maps'
+class OurLocation extends React.Component {
+  render () {
+    return (
+      <View>
+        <Header>OurLocation</Header>
+        <MapView
+          style={{ width: '100%', height: 200 }}
+          initialRegion={{
+            latitude: 37.3195624,
+            longitude: -121.9141499,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        >
+          <Marker
+            coordinate={{
+            latitude: 37.3195624,
+            longitude: -121.9141499,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+            title={"Wasya Co"}
+          />
+        </MapView>
+      </View>)
+  }
+}
+
+
 class Testimonials extends React.Component {
   render () {
     return (
@@ -72,4 +135,4 @@ class Testimonials extends React.Component {
   }
 }
 
-export { Clients, Testimonials, }
+export { Clients, ContactUs, OurLocation, Testimonials, }

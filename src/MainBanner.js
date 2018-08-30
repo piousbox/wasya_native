@@ -98,7 +98,8 @@ class MainBanner extends React.Component {
 
     return (
       <View >
-        { /* <View>
+      
+        <View>
           <Image width={Dimensions.get('window').width} source={banner} />
           <View style={style.text}>
             <Text style={style.innerText} >Rapid Software Development</Text>
@@ -154,7 +155,6 @@ class MainBanner extends React.Component {
           <TeamMember guy={team.bibas} />
           <TeamMember guy={team.kay} />
         </View>
-        */ }
 
       </View>)
   }
