@@ -6,10 +6,19 @@ import {
 import Image from 'react-native-scalable-image'
 import { Icon, Card, Button, } from 'react-native-elements'
 
-const bannerPath = './bg5.jpg'
+const bannerPath = './images/bg5.jpg'
 const banner = require(bannerPath)
-const logoPath = './logo4.png'
+const logoPath = './images/logo4.png'
 const logo = require(logoPath)
+
+import victor  from './images/team/victor_500x600.jpg'
+import oleg    from './images/team/oleg_500x600.jpg'
+import kim     from './images/team/kim_500x600.jpg'
+import brad    from './images/team/brad_500x600.jpg'
+import steve   from './images/team/steve_500x600.jpg'
+import bondar  from './images/team/bondar_500x600.jpg'
+
+import team    from './team'
 
 const style = {
   cardTitle: {
@@ -28,11 +37,12 @@ const style = {
 
 class Divider extends React.Component {
   render () {
+    let color = this.props.color || 'black'
     return (
       <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }} >
-        <View style={{ width: '30%', borderBottomColor: 'black', borderBottomWidth: 1, height: '50%' }} />
-        <View style={{ width: 24, }} ><Icon name='filter-vintage' /></View>
-        <View style={{ width: '30%', borderBottomColor: 'black', borderBottomWidth: 1, height: '50%' }} />
+        <View style={{ width: '30%', borderBottomColor: color, borderBottomWidth: 1, height: '50%' }} />
+        <View style={{ width: 24, }} ><Icon color={color} name='filter-vintage' /></View>
+        <View style={{ width: '30%', borderBottomColor: color, borderBottomWidth: 1, height: '50%' }} />
       </View>
       )
   }
@@ -45,6 +55,20 @@ class Header extends React.Component {
         <Text style={{ textAlign: 'center', fontSize: 20 }} >{this.props.children}</Text>
         <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }} >
           <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
+          <View style={{ width: 24, }} ><Icon name='filter-vintage' color="green" /></View>
+          <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
+        </View>
+      </View>
+    )
+  }
+}
+
+class Header2 extends React.Component {
+  render () {
+    return (
+      <View style={{ flex: 1, flexDirection: 'column' }} >
+        <Text style={{ textAlign: 'left', fontSize: 16 }} >{this.props.children}</Text>
+        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }} >
           <View style={{ width: 24, }} ><Icon name='filter-vintage' color="green" /></View>
           <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
         </View>
@@ -67,17 +91,27 @@ class MyCard extends React.Component {
   }
 }
 
-export default class MainBanner extends React.Component {
+class TeamMember extends React.Component {
+  render () {
+    return (
+      <View>
+        <Text>{this.props.guy.name}</Text>
+      </View>
+    )
+  }
+}
+
+class MainBanner extends React.Component {
   render() {
     const servicesCards = [
-      { title: "Ruby on Rails", img: require("./400x200/ruby.jpg"), description: "Our framework for rapid prototyping and non-real-time applications is Ruby on Rails. We use it for constructing APIs, providing backend for websites, generating static websites, and as the tool for general scripting." },
-      { title: "Node.js", img: require("./400x200/node.jpg"), description: "Node.js and Socket.js are our tools of choice for implementing real-time applications, event-driven applications, and microservices. We tend to use Node in combination with websockets." },
-      { title: "React.js", img: require("./400x200/react.jpg"), description: "We write frontend code using the React framework. It is the most popular front-end ecosystem currently available. Previously, we have worked a lot with Backbone and Angular.js." },
-      { title: "Chef", img: require("./400x200/chef.jpg"), description: "We wire up build/deploy pipelines using Chef. Simple deployments are done with standalone chef. For more complex cases we use server-client architecture., in which a change is propagated to each machine from a central repository." },
-      { title: "API's", img: require("./400x200/api.jpg"), description: "We are experts at building custom API's (ReSTful as well as event-driven). Documentation with Docs.io (formerly swagger). Test-driven. Deployed at scale." },
-      { title: "MVP's", img: require("./400x200/mvp.jpg"), description: "One of the most important steps in develoing consumer facing applications is market validation. We employ the lean methologody & iterative development to build versions of the product that effectively validate the market and the concept." },
-      { title: "UI/UX", img: require("./400x200/uiux.jpg"), description: "Modern software tools are expected to be highly usable, to the degree of not requiring documentation. The user interface should be self-explanatory, and the user experience intuitive." },
-      { title: "Devops", img: require("./400x200/devops.jpg"), description: "The mythical creature of Devops does not lend itself to being caught easily. We script repetitive maintenance tasks, automate build/deploy pipelines, and enable efficient operation." },
+      { title: "Ruby on Rails", img: require("./images/400x200/ruby.jpg"), description: "Our framework for rapid prototyping and non-real-time applications is Ruby on Rails. We use it for constructing APIs, providing backend for websites, generating static websites, and as the tool for general scripting." },
+      { title: "Node.js", img: require("./images/400x200/node.jpg"), description: "Node.js and Socket.js are our tools of choice for implementing real-time applications, event-driven applications, and microservices. We tend to use Node in combination with websockets." },
+      { title: "React.js", img: require("./images/400x200/react.jpg"), description: "We write frontend code using the React framework. It is the most popular front-end ecosystem currently available. Previously, we have worked a lot with Backbone and Angular.js." },
+      { title: "Chef", img: require("./images/400x200/chef.jpg"), description: "We wire up build/deploy pipelines using Chef. Simple deployments are done with standalone chef. For more complex cases we use server-client architecture., in which a change is propagated to each machine from a central repository." },
+      { title: "API's", img: require("./images/400x200/api.jpg"), description: "We are experts at building custom API's (ReSTful as well as event-driven). Documentation with Docs.io (formerly swagger). Test-driven. Deployed at scale." },
+      { title: "MVP's", img: require("./images/400x200/mvp.jpg"), description: "One of the most important steps in develoing consumer facing applications is market validation. We employ the lean methologody & iterative development to build versions of the product that effectively validate the market and the concept." },
+      { title: "UI/UX", img: require("./images/400x200/uiux.jpg"), description: "Modern software tools are expected to be highly usable, to the degree of not requiring documentation. The user interface should be self-explanatory, and the user experience intuitive." },
+      { title: "Devops", img: require("./images/400x200/devops.jpg"), description: "The mythical creature of Devops does not lend itself to being caught easily. We script repetitive maintenance tasks, automate build/deploy pipelines, and enable efficient operation." },
     ]
     let ourServicesCards = []
     servicesCards.forEach((item, idx) => {
@@ -125,7 +159,19 @@ export default class MainBanner extends React.Component {
           </View>
         </View>
 
+        <View>
+          <Header>Team</Header>
+          <Header2>Our Leadership</Header2>
+          <TeamMember guy={team.zach} />
+          <TeamMember guy={team.steve} />
+          <TeamMember guy={team.oleg} />
+          <TeamMember guy={team.bondar} />
+        </View>
+
       </View>)
   }
 }
+
+export default MainBanner
+export { Divider, }
 

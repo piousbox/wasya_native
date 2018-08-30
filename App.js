@@ -4,16 +4,18 @@ import {
 } from 'react-native'
 import IndustrialHeader from './src/IndustrialHeader'
 import MainBanner from './src/MainBanner'
+import { Divider } from './src/MainBanner'
 
 export default class App extends React.Component {
   render() {
+    console.log('+++ divider:', Divider)
+
     return (
       <ScrollView>
         <IndustrialHeader />
         <MainBanner />
-        <Text>Services</Text>
-        <Text>OurProcess</Text>
-        <Text>Team</Text>
+
+        <Divider color="red" />
         <Text>Testimonials</Text>
         <Text>ContactUs</Text>
         <Text>Map</Text>

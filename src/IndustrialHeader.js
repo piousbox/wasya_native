@@ -5,7 +5,7 @@ import {
 import { Header, } from 'react-native-elements'
 
 const logoUrl = "https://wasya.co/components/Navigation/images/logo-4.png"
-const logoPath = './logo-4.png'
+const logoPath = './images/logo-4.png'
 
 export default class IndustrialHeader extends React.Component {
   render() {
