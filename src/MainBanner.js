@@ -6,6 +6,8 @@ import {
 import Image from 'react-native-scalable-image'
 import { Icon, Card, Button, } from 'react-native-elements'
 
+import { Header, Header2 } from './utils'
+
 const bannerPath = './images/bg5.jpg'
 const banner = require(bannerPath)
 const logoPath = './images/logo4.png'
@@ -48,34 +50,7 @@ class Divider extends React.Component {
   }
 }
 
-class Header extends React.Component {
-  render () {
-    return (
-      <View style={{ flex: 1, flexDirection: 'column' }} >
-        <Text style={{ textAlign: 'center', fontSize: 20 }} >{this.props.children}</Text>
-        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }} >
-          <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
-          <View style={{ width: 24, }} ><Icon name='filter-vintage' color="green" /></View>
-          <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
-        </View>
-      </View>
-    )
-  }
-}
 
-class Header2 extends React.Component {
-  render () {
-    return (
-      <View style={{ flex: 1, flexDirection: 'column' }} >
-        <Text style={{ textAlign: 'left', fontSize: 16 }} >{this.props.children}</Text>
-        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }} >
-          <View style={{ width: 24, }} ><Icon name='filter-vintage' color="green" /></View>
-          <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
-        </View>
-      </View>
-    )
-  }
-}
 
 class MyCard extends React.Component {
   render () {
@@ -95,7 +70,10 @@ class TeamMember extends React.Component {
   render () {
     return (
       <View>
-        <Text>{this.props.guy.name}</Text>
+        <Card image={this.props.guy.image} imageStyle={{ height: 200 }}>
+          <Text>{this.props.guy.name}</Text>
+          <Text>{this.props.guy.title}</Text>
+        </Card>
       </View>
     )
   }
@@ -120,7 +98,7 @@ class MainBanner extends React.Component {
 
     return (
       <View >
-        <View>
+        { /* <View>
           <Image width={Dimensions.get('window').width} source={banner} />
           <View style={style.text}>
             <Text style={style.innerText} >Rapid Software Development</Text>
@@ -158,7 +136,7 @@ class MainBanner extends React.Component {
               }} title="Read More" />
           </View>
         </View>
-
+        
         <View>
           <Header>Team</Header>
           <Header2>Our Leadership</Header2>
@@ -166,7 +144,17 @@ class MainBanner extends React.Component {
           <TeamMember guy={team.steve} />
           <TeamMember guy={team.oleg} />
           <TeamMember guy={team.bondar} />
+          <Header2>Development Team</Header2>
+          <TeamMember guy={team.victor} />
+          <TeamMember guy={team.kim} />
+          <TeamMember guy={team.brad} />
+          <TeamMember guy={team.bugra} />
+          <TeamMember guy={team.jonathan} />
+          <TeamMember guy={team.theresa} />
+          <TeamMember guy={team.bibas} />
+          <TeamMember guy={team.kay} />
         </View>
+        */ }
 
       </View>)
   }

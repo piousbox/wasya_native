@@ -1,14 +1,14 @@
 
-const zach = require('./images/team/zach_500x600.jpg')
-const steve = require('./images/team/zach_500x600.jpg')
-const oleg = require('./images/team/zach_500x600.jpg')
-const bondar = require('./images/team/zach_500x600.jpg')
-const victor = require('./images/team/zach_500x600.jpg')
-const kim = require('./images/team/zach_500x600.jpg')
-const brad = require('./images/team/zach_500x600.jpg')
-const bugra = require('./images/team/zach_500x600.jpg')
+const zach = require('./images/team/zach_500x500.jpg')
+const steve = require('./images/team/steve_500x500.jpg')
+const oleg = require('./images/team/oleg_500x500.jpg')
+const bondar = require('./images/team/bondar_500x500.jpg')
+const victor = require('./images/team/victor_500x500.jpg')
+const kim = require('./images/team/kim_500x500.jpg')
+const brad = require('./images/team/brad_500x500.jpg')
+const bugra = require('./images/team/bugra_500x500.jpg')
 const d = require('./images/team/default_500x500.jpg')
-const kay = require('./images/team/zach_500x600.jpg')
+const kay = require('./images/team/kay_500x500.jpg')
 
 export default team = {
   zach: {
