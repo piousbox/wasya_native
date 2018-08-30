@@ -5,5 +5,7 @@
     "android": {
       "package": "co.wasya.native"
     }
-  }
+  },
+  "name": "wasya_native",
+  "displayName": "Wasya Co"
 }

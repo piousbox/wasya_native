@@ -1,0 +1,3 @@
+rootProject.name = 'wasya_native'
+
+include ':app'
