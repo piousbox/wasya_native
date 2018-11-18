@@ -71,6 +71,60 @@ export default class MainBanner extends React.Component {
         <Header>Software Development</Header>
         <Text style={style.p} >We do web application development, integration with external services, deployments, automation, wireframing and prototyping, as well as monitoring and scaling of existing applications. We will also go refactoring/rewriting of an existing application and migrating it from old codebase to nice and shiny new paradigm.</Text>
 
+        <Card title="Ruby on Rails" kind="ror" description="Our framework for rapid prototyping and non-real-time applications is Ruby on Rails. We use it for constructing APIs, providing backend for websites, generating static websites, and as the tool for general scripting." />
+        <Card title="Node.js & React.js" kind="node" description="" />
+        <Card title="Infrastructure Automation" kind="devops" description="" />
+
+        <Card title="API's" kind="api" description="" />
+        <Card title="RMVP's" kind="mvp" description="" />
+        <Card title="UI/UX" kind="uiux" description="" />
+
+        <Header>Our Process</Header>
+        <Text style={stype.p} >We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows.</Text>
+        <Button>Read More</Button>
+
+        <H2>Our Team</H2>
+        <H3>Leadership</H3>
+        <TeamMember name="Zach Mulholland" title="CEO" />
+        <TeamMember name="Stephen Kim" title="CFO" />
+        <TeamMember name="Oleg Pudeyev" title="CTO" />
+
+        <H3>Development Team</H3>
+        <TeamMember name="Victor Pudeyev" title="Principal Software Engineer" />
+        <TeamMember name="Kim Sinton" title="Principal Software Engineer" />
+        <TeamMember name="Kay Brown" title="Senior UI/UX Designer" />
+
+        <H2>Our Clients</H2>
+        <Client>Nexenta</Client>
+        <Client>Creek</Client>
+        <Client>Liatrio</Client>
+
+        <Client>HCM</Client>
+        <Client>SignVOX</Client>
+        <Client>ZMDigital</Client>
+
+        <H1>What People Are Saying</H1>
+        <Quote text="Victor build the application quickly and according to spec. Great communication, great leader." 
+               by="Stephen Kim" byTitle="Business Owner" />
+        <Quote text="Victor provided the necessary technical guidance for the team to succeed, in tight deadlines. Victor was a pleasure to work with."
+               by="Operaevent" byTitle="Bay Area Startup" />
+        <Quote text="Wasya Co delivered a great-looking mobile site, just what we wanted." 
+               by="Marchesi Design" byTitle="Furniture Store" />
+
+        <H1>Industries</H1>
+        <Industry name="Medical" />
+        <Industry name="Management" />
+        <Industry name="Publishing" />
+        <Industry name="Education" />
+        <Industry name="Construction" />
+        <Industry name="Entertainment" />
+
+        <H1>Contact Us</H1>
+
+        <H1>Our Location</H1>
+
+        <Footer />
+
       </View>)
   }
 }
