@@ -21,6 +21,26 @@ const style = {
   p: { padding: 20, },
 }
 
+
+class Button extends React.Component {
+  render () {
+    return null
+  }
+}
+
+class Card extends React.Component {
+  render () {
+    return null
+  }
+}
+
+class Client extends React.Component {
+  render () {
+    return null
+  }
+}
+
+
 class Divider extends React.Component {
   render () {
     return (
@@ -32,6 +52,17 @@ class Divider extends React.Component {
       )
   }
 }
+
+class Footer extends React.Component {
+  render () {
+    return (
+      <View>
+        <Text>Finally, the footer!</Text>
+      </View>
+    )
+  }
+}
+
 
 class Header extends React.Component {
   render () {
@@ -47,6 +78,45 @@ class Header extends React.Component {
     )
   }
 }
+
+class H1 extends React.Component {
+  render () {
+    return null
+  }
+}
+
+class H2 extends React.Component {
+  render () {
+    return null
+  }
+}
+
+class H3 extends React.Component {
+  render () {
+    return null
+  }
+}
+
+class Industry extends React.Component {
+  render () {
+    return null
+  }
+}
+
+
+class Quote extends React.Component {
+  render () {
+    return null
+  }
+}
+
+
+class TeamMember extends React.Component {
+  render () {
+    return null
+  }
+}
+
 
 export default class MainBanner extends React.Component {
   render() {
@@ -80,7 +150,7 @@ export default class MainBanner extends React.Component {
         <Card title="UI/UX" kind="uiux" description="" />
 
         <Header>Our Process</Header>
-        <Text style={stype.p} >We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows.</Text>
+        <Text style={style.p} >We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows.</Text>
         <Button>Read More</Button>
 
         <H2>Our Team</H2>
@@ -103,6 +173,7 @@ export default class MainBanner extends React.Component {
         <Client>SignVOX</Client>
         <Client>ZMDigital</Client>
 
+        <H1>Testimonials</H1>
         <H1>What People Are Saying</H1>
         <Quote text="Victor build the application quickly and according to spec. Great communication, great leader." 
                by="Stephen Kim" byTitle="Business Owner" />
@@ -122,6 +193,7 @@ export default class MainBanner extends React.Component {
         <H1>Contact Us</H1>
 
         <H1>Our Location</H1>
+        <H1>Map</H1>
 
         <Footer />
 

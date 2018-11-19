@@ -11,13 +11,6 @@ export default class App extends React.Component {
       <ScrollView>
         <IndustrialHeader />
         <MainBanner />
-        <Text>Services</Text>
-        <Text>OurProcess</Text>
-        <Text>Team</Text>
-        <Text>Testimonials</Text>
-        <Text>ContactUs</Text>
-        <Text>Map</Text>
-        <Text>Footer</Text>
       </ScrollView>
     )
   }
