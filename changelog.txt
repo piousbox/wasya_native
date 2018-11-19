@@ -1,0 +1,3 @@
+0.0.1 - this was from a while ago
+0.0.2 - react expo, works, has a test.
+
