@@ -9,14 +9,16 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "jest": {
-    "preset": "jest-expo"
+    "preset_trash": "jest-expo",
+    "preset": "react-native"
   },
   "dependencies": {
     "expo": "^27.0.1",
     "react": "16.3.1",
     "react-native": "~0.55.2",
     "react-native-elements": "^0.19.1",
-    "react-native-scalable-image": "^0.4.0"
+    "react-native-scalable-image": "^0.4.0",
+    "react-native-vector-icons": "^6.1.0"
   },
   "scripts": {
     "start": "react-native-scripts start",
