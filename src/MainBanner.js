@@ -1,7 +1,7 @@
 import React from 'react'
 import { 
   StyleSheet, Text, View,
-  Dimensions,
+  Dimensions, Button,
 } from 'react-native'
 import Image from 'react-native-scalable-image'
 import { Icon, } from 'react-native-elements'
@@ -16,16 +16,9 @@ const style = {
     justifyContent: 'center',
     paddingLeft: 20,
   },
-  innerText: { fontSize: 20, color: '#fff' },
+  innerText: { fontSize: 20, color: '#fff', },
   innerText2: { color: '#fff' },
   p: { padding: 20, },
-}
-
-
-class Button extends React.Component {
-  render () {
-    return null
-  }
 }
 
 class Card extends React.Component {
@@ -123,9 +116,9 @@ export default class MainBanner extends React.Component {
     return (
       <View >
         <Image width={Dimensions.get('window').width} source={banner} />
-        <View style={style.text}>
+        <View style={style.text} >
           <Text style={style.innerText} >Rapid Software Development</Text>
-          <Text style={style.innerText2}r >Using agile practices and the modern tech stack to achieve business goals</Text>
+          <Text style={style.innerText2} >Using agile practices and the modern tech stack to achieve business goals</Text>
         </View>
 
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} >
@@ -151,7 +144,7 @@ export default class MainBanner extends React.Component {
 
         <Header>Our Process</Header>
         <Text style={style.p} >We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows.</Text>
-        <Button>Read More</Button>
+        <Button title="Read More" onPress={()=>{}} />
 
         <H2>Our Team</H2>
         <H3>Leadership</H3>
