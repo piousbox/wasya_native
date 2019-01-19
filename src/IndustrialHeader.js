@@ -11,7 +11,7 @@ export default class IndustrialHeader extends React.Component {
   render() {
     return (
       <Header 
-        leftComponent={{ icon: 'menu', color: '#fff' }}
+        leftComponent={{ icon: 'menu', color: '#fff', onPress: this.props.openSidebar }}
         centerComponent={{ text: 'Wasya Co', style: { color: '#fff' } }}
       />)
   }
