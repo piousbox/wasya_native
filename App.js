@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {
+  Button,
   Platform, 
   StyleSheet, ScrollView,
   Text, 
@@ -53,11 +54,13 @@ class HomeScreen extends React.Component {
     this.setState({ isOpen })
   }
 
-  onMenuItemSelected = item =>
+  onMenuItemSelected = item => {
     this.setState({
       isOpen: false,
       selectedItem: item,
     })
+    this.props.navigation.navigate(item)
+  }
 
   render() {
     const menu = <Menu navigator={navigator} onItemSelected={this.onMenuItemSelected} />
@@ -76,45 +79,60 @@ class HomeScreen extends React.Component {
   }
 }
 
-class ProfileScreen extends React.Component {
-  render () {
+class OurProcessScreen extends React.Component {
+  static navigationOptions = { header: null }
+
+  constructor(props) {
+    super(props)
+
+    this.toggle = this.toggle.bind(this)
+
+    this.state = { 
+      isOpen: false,
+      selectedItem: 'About',
+    }
+  }
+
+  toggle() {
+    this.setState({ isOpen: true })
+  }
+
+  updateMenuState(isOpen) {
+    this.setState({ isOpen })
+  }
+
+  onMenuItemSelected = item => {
+    this.setState({
+      isOpen: false,
+      selectedItem: item,
+    })
+    this.props.navigation.navigate(item)
+  }
+
+  render() {
+    const menu = <Menu navigator={navigator} onItemSelected={this.onMenuItemSelected} />
+
     return (
-      <View>
-        <Text>ProfileScreen</Text>
-      </View>)
+      <SideMenu 
+        menu={menu}
+        isOpen={this.state.isOpen}
+        onChange={isOpen => this.updateMenuState(isOpen)} >
+        <ScrollView>
+          <IndustrialHeader openSidebar={() => {this.setState({isOpen:true})}} />
+          <Text>Our Process</Text>
+        </ScrollView>
+      </SideMenu>
+    )
   }
 }
 
 const AppNavigator = createStackNavigator({
   Home: { screen: HomeScreen },
-  // Profile: { screen: ProfileScreen },
+  OurProcess: { screen: OurProcessScreen },
 })
 
 const App = createAppContainer(AppNavigator)
 
 export default App
-
-
-
-// Legacy
-/* const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
-  }
-} */
 
 

@@ -43,23 +43,35 @@ export default class Menu extends React.Component {
   render() {
     return (
       <ScrollView scrollToTop={false} style={styles.menu} >
-        <View style={styles.avatarContainer}>
+
+        { /* <View style={styles.avatarContainer}>
           <Image
             style={styles.avatar}
             source={{ uri }}
           />
           <Text style={styles.name}>Your name</Text>
-        </View>
+        </View> */ }
 
         <Text
-          onPress={() => onItemSelected('About')}
-          style={styles.item}
-        >About</Text>
+          onPress={() => this.props.onItemSelected('Home')}
+          style={styles.item} >Home</Text>
 
         <Text
-          onPress={() => onItemSelected('Contacts')}
-          style={styles.item}
-        >Contacts</Text>
+          onPress={() => this.props.onItemSelected('OurProcess')}
+          style={styles.item} >Our Process</Text>
+
+        <Text
+          onPress={() => this.props.onItemSelected('OurTeam')}
+          style={styles.item} >Our Team</Text>
+
+        <Text
+          onPress={() => this.props.onItemSelected('OurClients')}
+          style={styles.item} >Our Clients</Text>
+
+        <Text
+          onPress={() => this.props.onItemSelected('CaseStudies')}
+          style={styles.item} >Case Studies</Text>
+
       </ScrollView>)
   }
 }

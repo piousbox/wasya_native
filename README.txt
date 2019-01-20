@@ -28,3 +28,4 @@ key password: simple_password
 == Troubleshooting ==
 === xcrun: error: unable to find utility "instruments", not a developer tool or in PATH ===
 https://stackoverflow.com/questions/39778607/error-running-react-native-app-from-terminal-ios
+

@@ -1,5 +1,6 @@
 import React from 'react'
 import { 
+  Button,
   StyleSheet, Text, View,
   Dimensions,
 } from 'react-native'
@@ -18,14 +19,9 @@ const style = {
   },
   innerText: { fontSize: 20, color: '#fff' },
   innerText2: { color: '#fff' },
-  p: { padding: 20, },
-}
-
-
-class Button extends React.Component {
-  render () {
-    return null
-  }
+  p: { 
+    padding: 20, 
+  },
 }
 
 class Card extends React.Component {
@@ -57,7 +53,7 @@ class Footer extends React.Component {
   render () {
     return (
       <View>
-        <Text>Finally, the footer!</Text>
+        { /* <Text>Finally, the footer!</Text> */ }
       </View>
     )
   }
@@ -121,7 +117,7 @@ class TeamMember extends React.Component {
 export default class MainBanner extends React.Component {
   render() {
     return (
-      <View >
+      <View style={{ backgroundColor: 'white' }} >
         <Image width={Dimensions.get('window').width} source={banner} />
         <View style={style.text}>
           <Text style={style.innerText} >Rapid Software Development</Text>
@@ -151,15 +147,15 @@ export default class MainBanner extends React.Component {
 
         <Header>Our Process</Header>
         <Text style={style.p} >We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows.</Text>
-        <Button>Read More</Button>
+        { /* <Button title="Read More" onPress={()=>{}} /> */ }
 
-        <H2>Our Team</H2>
+        <Header>Our Team</Header>
         <H3>Leadership</H3>
         <TeamMember name="Zach Mulholland" title="CEO" />
         <TeamMember name="Stephen Kim" title="CFO" />
         <TeamMember name="Oleg Pudeyev" title="CTO" />
 
-        <H3>Development Team</H3>
+        <Header>Development Team</Header>
         <TeamMember name="Victor Pudeyev" title="Principal Software Engineer" />
         <TeamMember name="Kim Sinton" title="Principal Software Engineer" />
         <TeamMember name="Kay Brown" title="Senior UI/UX Designer" />
