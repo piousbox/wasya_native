@@ -4,7 +4,7 @@
  npm install --save react-native-gesture-handler
  react-native link react-native-gesture-handler
  react-native link react-native-vector-icons
- 
+
 == Develop ==
 
  react-native run-android
@@ -13,6 +13,14 @@
 
 == Build / Deploy ==
 
+From: https://facebook.github.io/react-native/docs/signed-apk-android
+
+ keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+
+key password: simple_password
+ keytool -list -v -keystore ~/.android/debug.keystore
+ adb uninstall "com.wasya_native2"
+ 
  ./gradlew assembleRelease
 
 
