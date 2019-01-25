@@ -1,9 +1,9 @@
 
 == Todo ==
 
-* let's finish every page
-* Let's finish the homepage
 * Implement one test
+* Let's finish the homepage
+* let's finish every page
 
 == Done ==
 
