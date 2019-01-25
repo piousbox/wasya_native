@@ -10,63 +10,12 @@ import {
 import SideMenu from 'react-native-side-menu'
 import { createStackNavigator, createAppContainer, } from 'react-navigation'
 
+import IndustrialHeader from './IndustrialHeader'
+import Menu             from './Menu'
+import MainBanner       from './MainBanner'
+
 const window = Dimensions.get('window');
 
-import IndustrialHeader  from './src/IndustrialHeader'
-import Menu              from './src/Menu'
-import MainBanner        from './src/MainBanner'
-import OurTeamScreen     from './src/OurTeamScreen'
-import OurClientsScreen  from './src/OurClientsScreen'
-import CaseStudiesScreen from './src/CaseStudiesScreen'
-import ContactUsScreen   from './src/ContactUsScreen'
-
-
-class HomeScreen extends React.Component {
-  static navigationOptions = { header: null }
-
-  constructor(props) {
-    super(props)
-
-    this.toggle = this.toggle.bind(this)
-
-    this.state = { 
-      isOpen: false,
-      selectedItem: 'About',
-    }
-  }
-
-  toggle() {
-    this.setState({ isOpen: true })
-  }
-
-  updateMenuState(isOpen) {
-    this.setState({ isOpen })
-  }
-
-  onMenuItemSelected = item => {
-    this.setState({
-      isOpen: false,
-      selectedItem: item,
-    })
-    this.props.navigation.navigate(item)
-  }
-
-  render() {
-    const menu = <Menu navigator={navigator} onItemSelected={this.onMenuItemSelected} />
-
-    return (
-      <SideMenu 
-        menu={menu}
-        isOpen={this.state.isOpen}
-        onChange={isOpen => this.updateMenuState(isOpen)} >
-        <ScrollView>
-          <IndustrialHeader openSidebar={() => {this.setState({isOpen:true})}} />
-          <MainBanner />
-        </ScrollView>
-      </SideMenu>
-    )
-  }
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -86,7 +35,7 @@ const styles = StyleSheet.create({
 
 class OurProcessScreen extends React.Component {
   static navigationOptions = { header: null }
-  
+
   constructor(props) {
     super(props)
 
@@ -137,18 +86,4 @@ class OurProcessScreen extends React.Component {
   }
 }
 
-
-const AppNavigator = createStackNavigator({
-  Home: { screen: HomeScreen },
-  OurProcess: { screen: OurProcessScreen },
-  OurTeam: { screen: OurTeamScreen },
-  OurClients: { screen: OurClientsScreen },
-  CaseStudies: { screen: CaseStudiesScreen },
-  ContactUs: { screen: ContactUsScreen },
-})
-
-const App = createAppContainer(AppNavigator)
-
-export default App
-
-
+export default OurProcessScreen

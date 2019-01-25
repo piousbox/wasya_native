@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: window.width,
     height: window.height,
-    backgroundColor: 'gray',
+    backgroundColor: 'white',
     padding: 20,
   },
   avatarContainer: {
@@ -33,9 +33,16 @@ const styles = StyleSheet.create({
     top: 20,
   },
   item: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '300',
-    paddingTop: 5,
+    padding: 12,
+
+    /* paddingTop: 12,
+    paddingBottom: 12,
+
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: '#d6d7da', */
   },
 });
 
@@ -71,6 +78,10 @@ export default class Menu extends React.Component {
         <Text
           onPress={() => this.props.onItemSelected('CaseStudies')}
           style={styles.item} >Case Studies</Text>
+
+        <Text
+          onPress={() => this.props.onItemSelected('ContactUs')}
+          style={styles.item} >Contact Us</Text>
 
       </ScrollView>)
   }

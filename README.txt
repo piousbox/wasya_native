@@ -1,4 +1,16 @@
 
+== Todo ==
+
+* let's finish every page
+* Let's finish the homepage
+* Implement one test
+
+== Done ==
+
+* let's spread links on menu 
+* our process - white background, not transparent
+* Let's make every panel
+
 == Setup ==
 
  npm install --save react-native-gesture-handler
