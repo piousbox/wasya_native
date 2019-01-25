@@ -1,7 +1,7 @@
-import React from 'react';
-import MainBanner from '../MainBanner';
+import React from 'react'
+import MainBanner from '../MainBanner'
 
-import renderer from 'react-test-renderer';
+import renderer from 'react-test-renderer'
 
 test('renders correctly', () => {
   const tree = renderer.create(<MainBanner />).toJSON();

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+    }
+  }
+>
   <Image
     background={false}
     onSize={[Function]}
@@ -118,7 +124,6 @@ exports[`renders correctly 1`] = `
       }
     >
       <View
-        onPress={undefined}
         style={
           Array [
             false,
@@ -234,7 +239,6 @@ exports[`renders correctly 1`] = `
         }
       >
         <View
-          onPress={undefined}
           style={
             Array [
               false,
@@ -363,7 +367,6 @@ exports[`renders correctly 1`] = `
         }
       >
         <View
-          onPress={undefined}
           style={
             Array [
               false,
@@ -480,7 +483,6 @@ exports[`renders correctly 1`] = `
         }
       >
         <View
-          onPress={undefined}
           style={
             Array [
               false,
@@ -549,14 +551,214 @@ exports[`renders correctly 1`] = `
   >
     We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows.
   </Text>
-  <View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }
+  >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 20,
+          "textAlign": "center",
+        }
+      }
     >
-      Finally, the footer!
+      Our Team
     </Text>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderBottomColor": "green",
+            "borderBottomWidth": 6,
+            "height": "60%",
+            "width": "10%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": 24,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "green",
+                  "fontSize": 24,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "green",
+            "borderBottomWidth": 6,
+            "height": "60%",
+            "width": "10%",
+          }
+        }
+      />
+    </View>
   </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 20,
+          "textAlign": "center",
+        }
+      }
+    >
+      Development Team
+    </Text>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderBottomColor": "green",
+            "borderBottomWidth": 6,
+            "height": "60%",
+            "width": "10%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": 24,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "green",
+                  "fontSize": 24,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "green",
+            "borderBottomWidth": 6,
+            "height": "60%",
+            "width": "10%",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View />
 </View>
 `;
