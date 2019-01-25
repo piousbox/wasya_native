@@ -111,6 +111,7 @@ class OurProcessScreen extends React.Component {
 
   render() {
     const menu = <Menu navigator={navigator} onItemSelected={this.onMenuItemSelected} />
+    const {navigate} = this.props.navigation;
 
     return (
       <SideMenu 
@@ -118,7 +119,9 @@ class OurProcessScreen extends React.Component {
         isOpen={this.state.isOpen}
         onChange={isOpen => this.updateMenuState(isOpen)} >
         <ScrollView>
-          <IndustrialHeader openSidebar={() => {this.setState({isOpen:true})}} />
+          <IndustrialHeader 
+            navigate={navigate}
+            openSidebar={() => {this.setState({isOpen:true})}} />
           <Text>Our Process</Text>
         </ScrollView>
       </SideMenu>
