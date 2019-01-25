@@ -15,8 +15,9 @@ const window = Dimensions.get('window');
 import IndustrialHeader  from './src/IndustrialHeader'
 import Menu              from './src/Menu'
 import MainBanner        from './src/MainBanner'
-import OurTeamScreen     from './src/OurTeamScreen'
 import OurClientsScreen  from './src/OurClientsScreen'
+import OurProcessScreen  from './src/OurProcessScreen'
+import OurTeamScreen     from './src/OurTeamScreen'
 import CaseStudiesScreen from './src/CaseStudiesScreen'
 import ContactUsScreen   from './src/ContactUsScreen'
 
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
   h1: {},
 })
 
-class OurProcessScreen extends React.Component {
+/* class OurProcessScreen extends React.Component {
   static navigationOptions = { header: null }
   
   constructor(props) {
@@ -135,7 +136,7 @@ class OurProcessScreen extends React.Component {
       </SideMenu>
     )
   }
-}
+} */
 
 
 const AppNavigator = createStackNavigator({

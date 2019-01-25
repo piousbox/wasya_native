@@ -13,6 +13,7 @@ import { createStackNavigator, createAppContainer, } from 'react-navigation'
 import IndustrialHeader from './IndustrialHeader'
 import Menu             from './Menu'
 import MainBanner       from './MainBanner'
+import { Header }       from './utils'
 
 const window = Dimensions.get('window')
 
@@ -27,8 +28,12 @@ const styles = StyleSheet.create({
   },
   whiteBg: {
     backgroundColor: '#F5FCFF',
-    height: window.height,
+    minHeight: window.height,
     padding: 10,
+
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
   },
 })
 
@@ -42,7 +47,7 @@ class OurProcessScreen extends React.Component {
 
     this.state = { 
       isOpen: false,
-      selectedItem: 'About',
+      selectedItem: 'OurProcess',
     }
   }
 
@@ -75,8 +80,8 @@ class OurProcessScreen extends React.Component {
           <IndustrialHeader 
             navigate={navigate}
             openSidebar={() => {this.setState({isOpen:true})}} />
-          <View style={styles.whiteBg} >
-            <Text style={styles.h1} >Our Process</Text>
+          <View style={styles.whiteBg} >          
+            <Header>Our Process</Header>
             <Text>We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows. If the work is split by team function, this is reflected by the lanes. There can be additional lanes for "content", "Q/A", "graphics", "marketing", and "sales". Our iterative cycle consists of the following steps:</Text>
           </View>
         </ScrollView>
