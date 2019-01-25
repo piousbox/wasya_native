@@ -14,7 +14,7 @@ import IndustrialHeader from './IndustrialHeader'
 import Menu             from './Menu'
 import MainBanner       from './MainBanner'
 
-const window = Dimensions.get('window');
+const window = Dimensions.get('window')
 
 
 const styles = StyleSheet.create({
@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     height: window.height,
     padding: 10,
   },
-  h1: {},
 })
 
 class OurProcessScreen extends React.Component {

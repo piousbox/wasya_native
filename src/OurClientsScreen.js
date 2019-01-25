@@ -10,6 +10,7 @@ import {
 import { List, ListItem, } from 'react-native-elements'
 import SideMenu from 'react-native-side-menu'
 import { createStackNavigator, createAppContainer, } from 'react-navigation'
+const window = Dimensions.get('window')
 
 import { Header }       from './utils'
 import IndustrialHeader from './IndustrialHeader'
@@ -20,8 +21,11 @@ const style = {
   p: { padding: 20 },
   whiteBg: {
     backgroundColor: '#F5FCFF',
-    height: window.height,
+    minHeight: window.height,
     padding: 10,
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
   },
 }
 
@@ -30,12 +34,10 @@ class OurClientsScreen extends React.Component {
 
   constructor(props) {
     super(props)
-
     this.toggle = this.toggle.bind(this)
-
     this.state = { 
       isOpen: false,
-      selectedItem: 'About',
+      selectedItem: 'OurClients',
     }
   }
 
@@ -56,10 +58,8 @@ class OurClientsScreen extends React.Component {
   }
 
   render () {
-    // console.error('+++ header:', Header)
     const menu = <Menu navigator={navigator} onItemSelected={this.onMenuItemSelected} />
     const {navigate} = this.props.navigation;
-
     return (
       <SideMenu 
         menu={menu}
@@ -77,7 +77,7 @@ class OurClientsScreen extends React.Component {
       </SideMenu>
     )
 
-    return (
+    /* return (
       <View>
         <Header>Our Clients</Header>
         <Text style={style.p} >We seek to engage with medium-size companies, across all industries, who have specific business needs that can be addressed with technology. Examples of ideal clients include:</Text>
@@ -94,7 +94,8 @@ class OurClientsScreen extends React.Component {
         <Text style={style.p} >Some of the clients we have worked with are:</Text>
 
       </View>
-    )
+    ) */
+
   }
 }
 

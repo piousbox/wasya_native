@@ -18,12 +18,14 @@ const style = {
 class Header extends React.Component {
   render () {
     return (
-      <View style={{ flex: 1, flexDirection: 'column' }} >
-        <Text style={{ textAlign: 'center', fontSize: 20 }} >{this.props.children}</Text>
-        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }} >
-          <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
-          <View style={{ width: 24, }} ><Icon name='filter-vintage' color="green" /></View>
-          <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
+      <View style={{}} >
+        <View style={{ flex: 1, flexDirection: 'column' }} >
+          <Text style={{ textAlign: 'center', fontSize: 20 }} >{this.props.children}</Text>
+          <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }} >
+            <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
+            <View style={{ width: 24, }} ><Icon name='filter-vintage' color="green" /></View>
+            <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
+          </View>
         </View>
       </View>
     )
