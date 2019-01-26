@@ -6,7 +6,7 @@ import renderer from 'react-test-renderer'
 test('renders correctly', () => {
   const tree = renderer.create(<MainBanner />).toJSON();
   expect(tree).toMatchSnapshot();
-});
+})
 
 /*
 import React, {Component} from 'react'

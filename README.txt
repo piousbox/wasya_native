@@ -1,7 +1,7 @@
 
 == Todo ==
 
-* Implement one test
+* Implement one more test
 * Let's finish the homepage
 * let's finish every page
 
@@ -10,6 +10,7 @@
 * let's spread links on menu 
 * our process - white background, not transparent
 * Let's make every panel
+* Implement one test
 
 == Setup ==
 
@@ -23,6 +24,10 @@
  react-native run-ios
  react-native run-ios --simulator="iPhone 4s"
 
+== Test ==
+
+ npm run test
+ 
 == Build / Deploy ==
 
 From: https://facebook.github.io/react-native/docs/signed-apk-android
