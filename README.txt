@@ -1,7 +1,7 @@
 
 == Todo ==
 
-* Implement one more test
+* Let's compile & build
 * Let's finish the homepage
 * let's finish every page
 
@@ -11,6 +11,7 @@
 * our process - white background, not transparent
 * Let's make every panel
 * Implement one test
+* Implement one more test
 
 == Setup ==
 
