@@ -79,9 +79,9 @@ export default class Menu extends React.Component {
           onPress={() => this.props.onItemSelected('CaseStudies')}
           style={styles.item} >Case Studies</Text>
 
-        <Text
+        { /* <Text
           onPress={() => this.props.onItemSelected('ContactUs')}
-          style={styles.item} >Contact Us</Text>
+          style={styles.item} >Contact Us</Text> */ }
 
       </ScrollView>)
   }

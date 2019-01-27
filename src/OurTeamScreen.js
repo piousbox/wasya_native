@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {
   Button,
   Dimensions,
+  Image,
   Platform, 
   StyleSheet, ScrollView,
   Text, 
@@ -71,6 +72,18 @@ class OurTeamScreen extends React.Component {
     const menu = <Menu navigator={navigator} onItemSelected={this.onMenuItemSelected} />
     const {navigate} = this.props.navigation;
 
+    let ns = [ 
+      require("./images/bondar_500x500.jpg"),
+      require("./images/brad_500x500.jpg"),
+      require("./images/bugra_500x500.jpg"),
+      require("./images/kay_500x500.jpg"),
+      require("./images/kim_500x500.jpg"),
+      require("./images/oleg_500x500.jpg"),
+      require("./images/steve_500x500.jpg"),
+      require("./images/victor_500x500.jpg"),
+      require("./images/zach_500x500.jpg"),
+    ]
+
     return (
       <SideMenu 
         menu={menu}
@@ -82,6 +95,7 @@ class OurTeamScreen extends React.Component {
             openSidebar={() => {this.setState({isOpen:true})}} />
           <View style={styles.whiteBg} >          
             <Header>Our Team</Header>
+            {ns.map(n => (<Image key={n} style={{ width: '100%', marginBottom: 15 }} source={n} />))}
           </View>
         </ScrollView>
       </SideMenu>
